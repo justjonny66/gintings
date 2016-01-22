@@ -1,0 +1,266 @@
+/*Media Queries*/
+
+@custom-media --mobile-above (width >=360px);
+
+@custom-media --mobile-below (width < 360px);
+
+@custom-media --phablet-small-above (width >=400px);
+
+@custom-media --phablet-small-below (width < 400px);
+
+@custom-media --phablet-medium-above (width >=450px);
+
+@custom-media --phablet-medium-below (width < 450px);
+
+@custom-media --phablet-large-above (width >=500px);
+
+@custom-media --phablet-large-below (width < 500px);
+
+@custom-media --tablet-small-above (width >=600px);
+
+@custom-media --tablet-small-below (width < 600px);
+
+@custom-media --tablet-medium-above (width >=700px);
+
+@custom-media --tablet-medium-below (width < 700px);
+
+@custom-media --tablet-large-above (width >=750px);
+
+@custom-media --tablet-large-below (width < 750px);
+
+@custom-media --desktop-small-above (width >=800px);
+
+@custom-media --desktop-small-below (width < 800px);
+
+@custom-media --desktop-large-above (width >=1000px);
+
+@custom-media --desktop-large-below (width < 1000px);
+
+@custom-media --widescreen-small-above (width >=1200px);
+
+@custom-media --widescreen-small-below (width < 1200px);
+
+@custom-media --widescreen-large-above (width >=1400px);
+
+@custom-media --widescreen-large-below (width < 1400px);
+
+@custom-media --largescreen-above (width >=1600px);
+
+@custom-media --largescreen-below (width < 1600px);
+
+/* Colours */
+$black: #000000;
+$wht: #ffffff;
+$blue: #56687f;
+$dblue: #3b4858;
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  min-height: 0;
+  outline: 0;
+}
+
+ul, li {
+	margin: 0; 
+	padding: 0;
+	list-style: none;
+}
+
+a { 
+	text-decoration: none;
+	color: $dblue;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+fieldset, figure, h1 {
+  margin: 0;
+}
+
+.hide {
+  display: none;
+
+  @media (--tablet-small-below) {
+    &-tablet-small-below {
+      display: none;
+    }
+  }
+
+  @media (--tablet-small-above) {
+    &-tablet-small-above {
+      display: none;
+    }
+  }
+
+  @media (--desktop-small-below) {
+    &-desktop-small-below {
+      display: none;
+    }
+  }
+
+  @media (--desktop-small-above) {
+    &-desktop-small-above {
+      display: none;
+    }
+  }
+}
+
+footer {
+	border-top: 1px solid $blue;
+	margin-top: 1rem;
+	padding-top: 1rem;
+	@media (--desktop-small-above) {
+		display: flex;
+	}
+	.footer-left {
+		@media (--desktop-small-above) {
+			width: 50%;
+			display: flex;
+			border-right: 1px solid $blue;
+			ul {
+				width: 20%;
+			}
+		}
+	}
+	.footer-right {
+		width: 50%;
+		border: 1px solid red;
+		display: flex;
+		.box-footer {
+			background: $blue;
+			width: 50%;
+		}
+		.box-social {
+			width: 50%;
+		}
+	}
+	ul {
+		padding: 0;
+		margin: 0 .5rem 0 0;
+		list-style: none;
+		li {
+			margin: .1rem 0 0 0 ;
+			font-size: .9rem;
+		}
+		li:first-child {
+			border-bottom: 1px solid $dblue;
+			padding: 0 0 0.2rem 0;
+			margin: 0 0 .5rem 0;
+		}
+	}
+}
+
+.copyright {
+	width: 100%;
+	text-align: center;
+	margin: 1rem 0;
+	font-size: .9rem;
+}
+
+#site-navigation {
+	.nav-holder {
+		border-top: 2px solid $blue;
+		border-bottom: 2px solid $blue;
+	}
+	position: relative;
+
+	margin: 2rem 0;
+	
+	text-align: center;
+	ul {
+		
+		display: flex;
+		max-width: 800px;
+		margin: 0 auto;
+	
+		align-items: center;
+		li {
+			width: 20%;
+			padding: .5rem 0;
+			font-weight: bold;
+			a {
+			text-transform: uppercase;
+			color: $dblue;
+			
+			}
+		}
+		li.logo {
+				text-align: center;	
+					
+				display: block;
+				
+			
+				
+			a {
+				position: absolute;
+				background: url('/wp-content/themes/ginfoundry/assets/gin.svg') 50% 50% no-repeat;
+				width: 100%;
+				height: 100%;
+				max-width: 200px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(2.2);
+				transition: all .2s ease-in-out;
+			}
+		}
+	}
+	ul.gin-nav,
+	ul.features-nav,
+	ul.castings-nav,
+	ul.shop-nav {
+		border: 1px solid red;
+		width: 100%;
+		max-width: 800px;
+		display: none;
+		background: $dblue;
+		
+		li {
+			a {
+				color: $wht;
+			}
+		}
+	}
+
+}
+
+.copy {
+	text-align: center;
+}
+
+.flex {
+  display: flex;
+
+  &-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/wp-content/themes/ginfoundry/assets/fonts/HelveticaNeue-Medium.eot');
+	src: url('/wp-content/themes/ginfoundry/assets/fonts/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/ginfoundry/assets/fonts/HelveticaNeue-Medium.woff') format('woff'),
+		url('/wp-content/themes/ginfoundry/assets/fonts/HelveticaNeue-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}

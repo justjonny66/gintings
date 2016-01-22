@@ -1,0 +1,13 @@
+.content-article {
+	display: flex;
+	border: 1px solid red;
+	.article-left {
+		width: 25%;
+	}
+	.article-middle {
+		width: 50%;
+	}
+	.article-right {
+		width: 25%;
+	}
+}
