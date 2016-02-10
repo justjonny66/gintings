@@ -1,13 +1,126 @@
 .content-article {
 	display: flex;
-	border: 1px solid red;
+	justify-content: space-between;
 	.article-left {
-		width: 25%;
+		width: 28%;
+
+			
 	}
-	.article-middle {
-		width: 50%;
+	.article-main {
+		width: 40%;
+		margin: 0 2rem;
+		p {
+			margin-top: 1.3rem;
+			line-height: 1.4rem;
+			font-family: 'casion';
+		}
+		.sub-header {
+			width: 100%;
+			padding: 2.3rem 0 1.3rem;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		ul.social {
+			display: flex;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+			margin-top: 2rem;
+			li a {
+				width: 32px;
+				height: 28px;
+				text-indent: -9999px;
+				margin: 0 .2rem 0 0;
+				display: block;
+			}
+			li.sl1 {
+				background: url('/wp-content/themes/ginfoundry/assets/img/facebook.gif') no-repeat;
+			}
+			li.sl2 {
+				background: url('/wp-content/themes/ginfoundry/assets/img/twitter.gif') no-repeat;
+			}
+			li.sl3 {
+				background: url('/wp-content/themes/ginfoundry/assets/img/google.gif') no-repeat;
+			}
+			li.sl4 {
+				background: url('/wp-content/themes/ginfoundry/assets/img/email.gif') no-repeat;
+			}
+		}
 	}
 	.article-right {
-		width: 25%;
+		width: 28%;
+
+		.related {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			height: 150px;
+			flex-wrap: wrap;
+			h4 {
+				width: 100%;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				color: $dblue;
+				border-top: 1px solid $dblue;
+				padding-top: 1rem;
+				margin-top: 1rem;
+				padding-bottom: 1rem;
+				font-family: 'Helvetica Neue';
+			}
+			.box {
+				width: 48%;
+				background: $blue;
+				height: 100px;
+			}
+		}
 	}
+	h1 {
+		font-family: 'Helvetica Neue';
+		text-transform: uppercase;
+		color: $dblue;
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+	.date {
+		border-bottom: 1px solid $dblue;
+		padding-bottom: .5rem;
+		margin-bottom: .3rem;
+		margin-top: 1rem;
+		font-family: 'casion';
+	}
+	.author {
+		text-align: right;
+		margin: 0;
+		padding: 0;
+		font-family: 'casion';
+	}
+	.article-img-long {
+			background: $blue;
+			height: 400px;
+		}
+		.article-img-small {
+			height: 200px;
+			background: $blue;
+		}
+		.article-img-two {
+			display: flex;
+			justify-content: space-between;
+			background: none !important;
+			div {
+				width: 45%;
+				background: $blue;
+				height: 250px;
+			}
+
+		}
+		.article-img {
+			width: 100%;	
+			margin-bottom: 2rem;	
+			img {
+				width: 100%;
+				height: auto;
+			}	
+		}
+
 }

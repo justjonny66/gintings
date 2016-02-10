@@ -54,6 +54,8 @@ $wht: #ffffff;
 $blue: #56687f;
 $dblue: #3b4858;
 
+$dblueo: rgba(59, 72, 88, .95);
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -85,6 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url('/wp-content/themes/ginfoundry/assets/texture.svg') repeat;
 }
 
 main {
@@ -124,43 +127,73 @@ fieldset, figure, h1 {
 }
 
 footer {
-	border-top: 1px solid $blue;
-	margin-top: 1rem;
-	padding-top: 1rem;
+	h4 {
+		font-size: 1.3rem;
+		margin-bottom: 0.75rem;
+		color: $dblue;
+		font-weight: 100;
+		width: 100%;
+	}
+	border-top: 1px solid $dblue;
+	margin-top: 2rem;
+	padding-top: 2rem;
+	
+	
 	@media (--desktop-small-above) {
 		display: flex;
 	}
 	.footer-left {
+		padding-right: 2rem;
 		@media (--desktop-small-above) {
 			width: 50%;
 			display: flex;
+			flex-wrap: wrap;
 			border-right: 1px solid $blue;
 			ul {
-				width: 20%;
+				width: 18%;
+				flex-grow: 1;
 			}
 		}
 	}
 	.footer-right {
 		width: 50%;
-		border: 1px solid red;
+		border-left: 1px solid $dblue;
+		padding-left: 2rem;
 		display: flex;
 		.box-footer {
 			background: $blue;
 			width: 50%;
+			margin-right: 1rem;
 		}
 		.box-social {
 			width: 50%;
+
+			.txt {
+				border: 1px solid $dblue;
+				border-right: none;
+				padding: .2rem;
+			}
+			.sbt {
+				background: $dblue;
+				color: $wht;
+				border: 0 none;
+				margin-left: -4px;
+				padding: .3rem;
+				line-height: 1.1rem;
+				margin-top: -.1rem;
+			}
 		}
 	}
 	ul {
+		font-family: 'Casion';
 		padding: 0;
-		margin: 0 .5rem 0 0;
+		margin: .3rem .5rem 0 0;
 		list-style: none;
 		li {
 			margin: .1rem 0 0 0 ;
 			font-size: .9rem;
 		}
-		li:first-child {
+		li.title {
 			border-bottom: 1px solid $dblue;
 			padding: 0 0 0.2rem 0;
 			margin: 0 0 .5rem 0;
@@ -171,76 +204,76 @@ footer {
 .copyright {
 	width: 100%;
 	text-align: center;
-	margin: 1rem 0;
-	font-size: .9rem;
+	margin: 2rem 0 2rem;
+	font-size: .8rem;
+	font-family: 'Casion';
 }
 
+			ul.social {
+				display: flex;
+				width: 100%;
+				text-align: center;
+				justify-content: flex-start;
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+				li a {
+					width: 32px;
+					height: 28px;
+					text-indent: -9999px;
+					
+					display: block;
+					border: none;
+				}
+				li.sl1 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-twit.png') no-repeat;
+					width: 29px;
+					height: 24px;
+				}
+				li.sl2 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-insta.png') no-repeat;
+					width: 23px;
+					height: 24px;
+				}
+				li.sl3 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-face.png') no-repeat;
+					width: 23px;
+					height: 24px;
+				}
+				li.sl4 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-yt.png') no-repeat;
+					width: 34px;
+					height: 24px;
+				}
+				li.sl5 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-pint.png') no-repeat;
+					width: 23px;
+					height: 24px;
+				}
+				li.sl6 {
+					background: url('/wp-content/themes/ginfoundry/assets/img/follow-gplus.png') no-repeat;
+					width: 24px;
+					height: 24px;
+				}
+			}
+/*
+
 #site-navigation {
+		border-top: 2px solid $dblue;
+		border-bottom: 2px solid $dblue;
 	.nav-holder {
-		border-top: 2px solid $blue;
-		border-bottom: 2px solid $blue;
+
 	}
 	position: relative;
 
 	margin: 2rem 0;
-	
+	height: 200px;
 	text-align: center;
-	ul {
-		
-		display: flex;
-		max-width: 800px;
-		margin: 0 auto;
-	
-		align-items: center;
-		li {
-			width: 20%;
-			padding: .5rem 0;
-			font-weight: bold;
-			a {
-			text-transform: uppercase;
-			color: $dblue;
-			
-			}
-		}
-		li.logo {
-				text-align: center;	
-					
-				display: block;
-				
-			
-				
-			a {
-				position: absolute;
-				background: url('/wp-content/themes/ginfoundry/assets/gin.svg') 50% 50% no-repeat;
-				width: 100%;
-				height: 100%;
-				max-width: 200px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%) scale(2.2);
-				transition: all .2s ease-in-out;
-			}
-		}
-	}
-	ul.gin-nav,
-	ul.features-nav,
-	ul.castings-nav,
-	ul.shop-nav {
-		border: 1px solid red;
-		width: 100%;
-		max-width: 800px;
-		display: none;
-		background: $dblue;
-		
-		li {
-			a {
-				color: $wht;
-			}
-		}
+	.logo {
+
 	}
 
 }
-
+*/
 .copy {
 	text-align: center;
 }
@@ -255,6 +288,65 @@ footer {
   }
 }
 
+
+.verification {
+	display: none;
+	overflow: hidden;
+	background: rgba(48, 58, 71, .95);
+	width: 100%;
+	height: 100%;
+	z-index: 1000000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	img {
+		max-width: 250px;
+		margin-top: 100px;
+	}
+	p {
+		text-transform: uppercase;
+		color: #fff;
+		margin: 1rem 0 1rem 0;
+		font-size: 1rem;
+	}
+	p:first-child {
+		font-size: 1.2rem;
+	}
+	a {
+		background: $wht;
+		padding: .2rem .5rem;
+		color: $dblue;
+		text-transform: uppercase;
+		margin: 1rem .5rem;
+	}
+}
+
+/*.wrap { position:absolute; top:50%; left:50%; margin-left:-220px; margin-top:-28px; }
+.menu {
+  > li {
+    position:relative; float:left; background:white; width:120px; text-align:center;
+    &:hover .drop { opacity:1; visibility:visible; margin:0; }
+    > a {
+      padding:20px 0; display:block; color:$dblue;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  li { list-style:none; }
+  .drop {
+    position:absolute; visibility:hidden; top:56px; left:0; background:$dblue; padding:5px 20px; opacity:0; transition:opacity 0.1s, margin-top 0.1s; box-shadow:0 0 25px rgba(black,0.15); width:500px; margin-top:10px;
+    display: flex;
+    &:after { content:""; width:0px; height:0px; border-style:solid; border-width:0 7px 7px 7px; border-color:transparent transparent white transparent; position:absolute; top:-7px;; left:15px; display:block; }
+    li { text-align:left; }
+    li a {
+      border-bottom:1px solid #efefef; padding:15px 0; display:block; color:#fff; transition:color 0.2s;
+      &:hover { color:black; }
+    }
+    li:last-child a { border:none; }
+  }
+}*/
+
 @font-face {
 	font-family: 'Helvetica Neue';
 	src: url('/wp-content/themes/ginfoundry/assets/fonts/HelveticaNeue-Medium.eot');
@@ -264,3 +356,187 @@ footer {
 	font-weight: 500;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Casion';
+	src: url('/wp-content/themes/ginfoundry/assets/fonts/acaslonpro-regular.eot');
+	src: url('/wp-content/themes/ginfoundry/assets/fonts/acaslonpro-regular?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/ginfoundry/assets/fonts/acaslonpro-regular.woff') format('woff'),
+		url('/wp-content/themes/ginfoundry/assets/fonts/acaslonpro-regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+header {
+	  border-top: 3px solid $dblue;
+  border-bottom: 3px solid $dblue;
+  padding: .4rem 0;
+  margin: 2rem 0;
+  height: 59px;
+}
+
+.nav-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  	z-index: 10000;
+  	  max-width: 800px;
+  margin: auto;
+}
+
+
+
+.nav {
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  font-family: 'Helvetica Neue';
+}
+
+
+.nav > li {
+  display: inline-block;
+  z-index: 0
+}
+
+.nav > li:hover {
+  
+}
+
+
+
+.nav > li > ul {
+  background: $dblue;
+  color: #fff;
+
+}
+
+/*.nav > li > ul:after {
+	
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-45deg);
+  -ms-transform: skew(-45deg);
+  transform: skew(-45deg);
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.nav > li > ul:before {
+	 background: $dblue;
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-90deg);
+  -ms-transform: skew(-90deg);
+  transform: skew(-90deg);
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;	
+	
+}*/
+
+.nav> li > ul::before   {
+	 background: url('/wp-content/themes/ginfoundry/assets/img/before.png');
+	 border: 1px solid red;
+	 width: 100px;
+	 height: 100px;
+}
+
+
+
+
+.nav > li > a {
+  display: block;
+  text-decoration: none;
+  color: $dblue;
+  line-height: 40px;
+  padding: 0px 30px 19px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.nav > li.logo {
+	z-index: 1000;
+	text-indent: -9999px;
+	position: absolute;
+	margin-top: -27px;
+}
+
+.nav > li.logo a {
+	background: url('/wp-content/themes/ginfoundry/assets/gin.svg') no-repeat;
+	width: 130px;
+	height: 100px;
+	display: block;
+	transition: 0.4s;
+}
+
+
+.nav > li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav > li > ul {
+  position: absolute;
+  top: 49px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  list-style: none;
+  padding: 0px;
+
+}
+
+.nav > li.castings {
+	margin-left: 122px;
+}
+
+.nav > li > ul > li {
+  margin: 0 auto;
+
+  color: #fff;
+}
+
+.nav .subnav {
+	display: flex !important;
+	align-items: center;
+	justify-content: space-around;
+	padding: 1rem 0;
+}
+
+
+.nav > li > ul > li > ul {
+
+  padding: 0px;
+
+}
+
+.nav > li > ul > li > ul > li {
+  list-style: none;
+}
+
+.nav > li > ul > li > ul > li a {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+fieldset { border: 0 none;}
+

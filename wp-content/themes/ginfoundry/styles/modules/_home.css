@@ -1,62 +1,156 @@
 #page {
-	max-width: 1200px;
+	max-width: 1300px;
 	width: 100%;
 	margin: 0 auto;
-	border: 1px solid red;
-
+	p {
+		font-family: 'Casion';
+	}
 	.slider {
-		border: 1px solid blue;
-		background: $blue;
-		height: 300px;
+		height: 400px;
+		div {
+			width: 100%;	
+			height: 400px;
+		}
+	}
+	.slick-slider {
+		margin: 0;
 	}
 	.content-home {
 		@media (--desktop-small-above) {
 			display: flex;
-			height: 500px;
-			align-items: center;
+			align-items: top;
 			margin-top: 1rem;
 		}
 		h2 {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			color: $wht;
-			background: $dblue;
+			background: $dblueo;
 			padding: .5rem;
 			width: 100%;
-			
+			text-transform: uppercase;
 			font-family: 'Helvetica Neue';
 			font-weight: 500;
+			position: absolute;
+			bottom: 0;
+			left: 0;
 		}
-		
+		.box {
+			background: $blue;
+			width: 100%;
+			height: 100%;
+			height: 180px;
+			position: relative;
+			background-size: cover;
+		}
+		.boxes {
+			background: $blue;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			background-size: contain;
+			
+		}
+		.box-holder-2 {
+			display: flex;
+			margin-top: 1rem;
+			height: 180px;
+			width: 100%;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			div.box-outside:first-child {
+				border-right: 1px solid $dblue;
+				padding-right: 1rem;
+			}
+			.box-outside {
+				width: 47%;
+
+			}
+		}
 	}
 	.content-left {
 		@media (--desktop-small-above) {
-			height: 500px;
 			padding-right: 1rem;
-			width: 30%;
+			width: 35%;
 			border-right: 1px solid $blue;
 			align-content: flex-end;
+		}
+		p {
+					margin-top: 0.5rem;
+				font-weight: 100;
+				font-size: .9rem;
+				line-height: 1.2rem;		
+		}
+		.box.larger {
+			height: 612px;
+			h2 {
+				font-size: 2rem;
+				padding: .5rem;
+			}
 		}
 
 	}
 	.content-middle {
+		border-right: 1px solid $dblue;
+		padding-right: 1rem;
 		@media (--desktop-small-above) {
-			height: 500px;
-			background: $blue;
-			width: 50%;
+			width: 55%;
 			margin-left: 1rem;
+
+		justify-content: space-betwee;
+		}
+		
+
+		
+		.content-middle-full {
+			display: flex;
+			align-items: top;
+			width: 100%;
+					
+		}
+		.content-middle-full-one {
+
+			margin-bottom: 1rem;
+			.larger {
+				height: 350px;
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+		}
+		.box-outside {
+			width: 100%;
+			border-right: 1px solid $dblue;
+			padding-right: 1rem;
+			margin-right: 1rem;
+			width: 32%;
+			height: 100%;
+			margin-bottom: 1rem;
+			p {
+				margin-top: 0.5rem;
+				font-weight: 100;
+				font-size: .9rem;
+				line-height: 1.2rem;
+			}
+			&:last-child {
+				margin-right: 0;
+				border-right: none;
+				padding-right: 0;
+			}
+		}
+		.boxes {
+			height: 180px;
 		}
 	}
 	.content-right {
 		@media (--desktop-small-above) {
-			height: 500px;
-			background: $blue;
-			width: 20%;
+		
+			width: 15%;
 			margin-left: 1rem;
 		}
-	}
-	.box {
-		background: $blue;
-		width: 100%;
-		height: 100%;
+			.box {
+				margin-bottom: 1rem;
+				height: 180px;
+			}
+		
 	}
 }

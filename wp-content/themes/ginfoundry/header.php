@@ -35,44 +35,101 @@
 <body <?php body_class(); ?>>
 <header id="masthead" class="site-header" role="banner">
 
+<div class="nav-container">
+  <ul class="nav">
+
+    <li class="first"><a href="#">Gin</a>
+	    <ul>
+	        <li>
+	          <ul class="subnav">
+	            <li><a href="#">Reviews</a></li>
+	            <li><a href="#">Cocktails</a></li>
+	            <li><a href="#">Distillery</a></li>
+	          </ul>
+	        </li>
+	  	</ul>
+	  	<li class="first"><a href="#">Features</a>
+	    <ul>
+	        <li>
+	          <ul class="subnav">
+	            <li><a href="#">News</a></li>
+	            <li><a href="#">Insight</a></li>
+	            <li><a href="#">Interviews</a></li>
+	            <li><a href="#">Botanicals</a></li>
+	          </ul>
+	        </li>
+	  	</ul>
+	  <li class="logo"><a href="#">LOGO</a></li>
+	  <li class="first castings" class="first"><a href="#">Castings</a>
+	    <ul>
+	        <li>
+	          <ul class="subnav">
+	            <li><a href="#">Ginvent</a></li>
+	            <li><a href="#">Junipalooza</a></li>
+	            <li><a href="#">Ginsmith Award</a></li>
+	            <li><a href="#">Atlas</a></li>
+	            <li><a href="#">Ginfographic</a></li>
+	          </ul>
+	        </li>
+	  	</ul>
+	  	<li class="first"><a href="#">Shop</a>
+	    <ul>
+	        <li>
+	          <ul class="subnav">
+	            <li><a href="#">Reviews</a></li>
+	            <li><a href="#">Cocktails</a></li>
+	            <li><a href="#">Distillery</a></li>
+	          </ul>
+
+	        </li>
+	  	</ul>
+	  	
+</div>
+
+
+<!--
+
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div class="nav-holder">
-			<ul class="main-nav">
-				<li><a href="#" class="link1">Gin</a></li>
-				<li><a href="#" class="link2">Features</a></li>
-				<li class="logo"><a href="#"></a></li>
-				<li><a href="#" class="link3">Castings</a></li>
-				<li><a href="#" class="link4">Shop</a></li>
-			</ul>
+		<div class="wrap">
+  
+		  <ul class="menu">
+		    <li>
+		      <a href="#">Gin</a>
+		      <ul class="drop">
+		        <li><a href="#">Bacon</a></li>
+		        <li><a href="#">Pancakes</a></li>
+		      </ul>
+		    </li>
+		    <li>
+		      <a href="#">Features</a>
+		      <ul class="drop">
+		        <li><a href="#">Fish</a></li>
+		        <li><a href="#">Lasagne</a></li>
+		      </ul>
+		    </li>
+		    <li class="logo">Logo</li>
+		    <li>
+		      <a href="#">Castings</a>
+		      <ul class="drop">
+		        <li><a href="#">Fish</a></li>
+		        <li><a href="#">Lasagne</a></li>
+		      </ul>
+		    </li>
+		    <li>
+		      <a href="#">Shop</a>
+		      <ul class="drop">
+		        <li><a href="#">Fish</a></li>
+		        <li><a href="#">Lasagne</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+		  
 		</div>
-		<ul class="gin-nav" id="div1">
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-		</ul>
-		<ul class="features-nav" id="div2">
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-		</ul>
-		<ul class="castings-nav" id="div3">
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-		</ul>
-		<ul class="shop-nav" id="div4">
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-			<li><a href="">Gin1</a></li>
-		</ul>
+
 		
 		<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-	</nav><!-- #site-navigation -->
-</header><!-- #masthead -->
+	</nav> -->
+</header>
 <div id="page" class="site">
 
 	<div id="content" class="site-content">

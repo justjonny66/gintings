@@ -15,7 +15,7 @@
 
 	<footer class="site-footer">
 		<div class="footer-left">
-			
+			<h4>Gin Foundry.com</h4>
 			<ul>
 				<li class="title">Gins</li>
 				<li><a href="#">Botanicals</a></li>
@@ -33,9 +33,10 @@
 				<li class="title">Castings</li>
 				<li><a href="#">Ginvent</a></li>
 				<li><a href="#">Junipalooza</a></li>
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Ginsmith Award</a></li>
+				<li><a href="#">Atlas</a></li>
+				<li><a href="#">Ginfographic</a></li>
+				<li><a href="#">Glasshouse</a></li>
 			</ul>
 			<ul>
 				<li class="title">Shop</li>
@@ -54,23 +55,24 @@
 		</div>
 		<div class="footer-right">
 			<div class="box-footer">
+				<?php echo do_shortcode("[poll id='3']"); ?>
 			</div>
 			<div class="box-social">
 				<h4>Join Us</h4>
-				<input type="text" />
-				<input type="submit" />
-				<ul class="social-list">
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</div>
+				<input type="text" class="txt" />
+				<input type="submit" class="sbt" />
+				<ul class="social">
+					<li class="sl1"><a href="#">Twitter</a></li>
+					<li class="sl2"><a href="#">Facebook</a></li>
+					<li class="sl3"><a href="#">Google</a></li>
+					<li class="sl4"><a href="#">Email</a></li>
+					<li class="sl5"><a href="#">Email</a></li>
+					<li class="sl6"><a href="#">Email</a></li>
+				</ul>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
-	<p class="copyright">Copyright Gin Foundry</p>
+	<p class="copyright">Copyright &copy; Gin Foundry</p>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -2,24 +2,37 @@
 
 // A $( document ).ready() block.
 $( document ).ready(function() {
-	$("a.link1, ul.gin-nav").hover(
+	
+	/*$("ul > li").hover(function() {
 
-	  
-	  function(e){ 
-	  $("ul.gin-nav").slideDown();
-	  $(".logo a").css('transform', 'scale(' + .2 + ')');	  
-	  }, // over
-	  function(e){ 
-	  $("ul.gin-nav").slideUp();
-	  $(".logo a").css('transform', 'scale(' + 1 + ')');
-	  }  // out
-	  
-	);
+	  $('.logo').css('transform', 'scale(' + 0.7 + ')');
+
+	});*/
+	
+	$('#yes').click(function() {
+		$('.verification').fadeOut();
+	});
 	
 	$('.slider').slick({
 		arrows: true,
 		infinite: true,
-		autoplay: false
+		autoplay: true
 	});
+	
+	$('.first').hover(function () {
+	    $('.logo a').css({
+	    '-webkit-transform': 'scale(0.5)',
+	    '-moz-transform': 'scale(0.5)',
+	    '-o-transform': 'scale(0.5)'
+		});
+	
+	  }, function () {
+	    $('.logo a').css({
+	    '-webkit-transform': 'scale(1)',
+	    '-moz-transform': 'scale(1)',
+	    '-o-transform': 'scale(1)'
+	});
+	  }
+	);
 		
 });
